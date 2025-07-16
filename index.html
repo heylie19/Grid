@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modas MyH</title>
+  <link rel="stylesheet" href="estilo.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <h1>🛍️ Modas MyH</h1>
+    <p>Moda para todos los estilos</p>
+  </header>
+
+  <!-- VISTA: INICIO -->
+  <main id="home-view" class="view">
+    <h2 class="section-title">Catálogo</h2>
+    <div class="product-grid" id="product-list">
+      <!-- Productos cargados con JS -->
+    </div>
+  </main>
+
+  <!-- VISTA: DETALLE DE PRODUCTO -->
+  <main id="detail-view" class="view hidden">
+    <div class="product-detail" id="product-detail"></div>
+    <button class="back-btn" onclick="switchView('home-view')">← Volver al catálogo</button>
+  </main>
+
+  <!-- VISTA: CARRITO -->
+  <main id="cart-view" class="view hidden">
+    <h2>🛒 Tu Carrito</h2>
+    <div id="cart-items" class="cart-grid"></div>
+  </main>
+
+  <!-- CATEGORÍAS -->
+<main id="categories-view" class="view hidden">
+  <h2>Categorías</h2>
+  <div class="categories-list">
+    <div class="category-card">
+      <h3>👚 Blusas</h3>
+      <p>Estilos casuales y elegantes para cada ocasión.</p>
+    </div>
+    <div class="category-card">
+      <h3>👖 Pantalones</h3>
+      <p>Jeans, leggings y más para combinar tu outfit.</p>
+    </div>
+    <div class="category-card">
+      <h3>👗 Vestidos</h3>
+      <p>Desde vestidos cortos hasta vestidos para eventos.</p>
+    </div>
+    <div class="category-card">
+      <h3>🧥 Chaquetas</h3>
+      <p>Prendas abrigadoras y con estilo para cualquier temporada.</p>
+    </div>
+  </div>
+</main>
+
+
+  <!-- PERFIL -->
+  <main id="profile-view" class="view hidden">
+    <h2>Perfil</h2>
+    <p>Bienvenido a Modas MyH</p>
+  </main>
+
+  <!-- MENÚ INFERIOR -->
+  <nav class="bottom-menu">
+    <a href="#" data-view="home-view">Inicio</a>
+    <a href="#" data-view="categories-view">Categorías</a>
+    <a href="#" data-view="cart-view">Carrito</a>
+    <a href="#" data-view="profile-view">Perfil</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
